@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-
+st.image("TRASUA.jpg.PNG")
 # Cấu hình trang Streamlit
 st.set_page_config(
     page_title="Hệ Thống Bán Trà Sữa",
