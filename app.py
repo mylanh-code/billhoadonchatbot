@@ -1,9 +1,20 @@
 from datetime import datetime
 import pandas as pd
 import streamlit as st
+from datetime import datetime
 
-# Cấu hình trang Streamlit - Bắt buộc đặt ở dòng đầu tiên của các lệnh Streamlit
-st.set_page_config(page_title="Hệ Thống Bán Trà Sữa", page_icon="🧋", layout="wide")
+# BẮT BUỘC ĐẶT LỆNH NÀY LÊN ĐẦU TIÊN (Trước st.image hay bất kỳ lệnh st. nào khác)
+st.set_page_config(
+    page_title="Hệ Thống Bán Trà Sữa",
+    page_icon="🧋",
+    layout="wide"
+)
+
+# Sau đó mới tới các lệnh giao diện khác
+try:
+    st.image("TRASUA.jpg.PNG", use_container_width=True)
+except Exception:
+    pass
 
 # Khởi tạo session_state cho giỏ hàng và lịch sử chat nếu chưa có
 if "cart" not in st.session_state:
